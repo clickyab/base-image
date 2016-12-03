@@ -10,7 +10,9 @@ $minimal_apt_get_install wget curl sudo git zsh nano libsqlite3-dev autoconf bis
 
 GOBIN=/usr/local/bin GOPATH=/tmp go get -v -u github.com/mailhog/MailHog
 pip install --upgrade --no-cache-dir pip
-
+cd /tmp && wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.0.2.deb
+dpkg -i /tmp/elasticsearch-5.0.2.deb
+rm -f /tmp/elasticsearch-5.0.2.deb
 # Create vagrant user
 bash -c "echo root:bita123 | chpasswd"
 groupadd develop
