@@ -10,7 +10,7 @@ $minimal_apt_get_install wget curl sudo git zsh nano libsqlite3-dev autoconf bis
                 libyaml-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev htop redis-server mariadb-server mariadb-client mercurial \
                 ruby-dev rabbitmq-server realpath pkg-config unzip dnsutils re2c python-pip htop nodejs \
                 python-dev libpq-dev tmux bzr libsodium-dev cmake default-jdk golang golang-race-detector-runtime python-setuptools \
-		elasticsearch
+		elasticsearch libevent1-dev libconfig-dev liblua5.1-0-dev lua5.1 libjansson-dev
 
 GOBIN=/usr/local/bin GOPATH=/tmp go get -v -u github.com/mailhog/MailHog
 pip install --upgrade --no-cache-dir pip
