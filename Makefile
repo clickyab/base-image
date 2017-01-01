@@ -1,4 +1,4 @@
-NAME = helium/baseimage
+NAME = registry.clickyab.ae/clickyab/baseimage-go-php
 VERSION = 0.9.19
 
 .PHONY: all build test tag_latest release ssh
