@@ -2,6 +2,10 @@
 set -euo pipefail
 source /bd_build/buildconfig
 
+
+cd /tmp
+curl https://godeb.s3.amazonaws.com/godeb-amd64.tar.gz | gunzip | tar xvf -
+/tmp/godeb install 1.8
 curl -sL https://deb.nodesource.com/setup_6.x | bash -
 curl https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
 echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" >/etc/apt/sources.list.d/elastic-5.x.list
@@ -9,7 +13,7 @@ echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" >/etc/apt/s
 $minimal_apt_get_install wget curl sudo git zsh nano libsqlite3-dev autoconf bison build-essential libssl-dev \
                 libyaml-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev htop redis-server mariadb-server mariadb-client mercurial \
                 ruby-dev rabbitmq-server realpath pkg-config unzip dnsutils re2c python-pip htop nodejs \
-                python-dev libpq-dev tmux bzr libsodium-dev cmake default-jdk golang golang-race-detector-runtime python-setuptools \
+                python-dev libpq-dev tmux bzr libsodium-dev cmake default-jdk python-setuptools \
 		elasticsearch libevent1-dev libconfig-dev liblua5.1-0-dev lua5.1 libjansson-dev
 
 GOBIN=/usr/local/bin GOPATH=/tmp go get -v -u github.com/mailhog/MailHog
