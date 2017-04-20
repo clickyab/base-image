@@ -5,7 +5,7 @@ source /bd_build/buildconfig
 
 cd /tmp
 curl https://godeb.s3.amazonaws.com/godeb-amd64.tar.gz | gunzip | tar xvf -
-/tmp/godeb install 1.8
+/tmp/godeb install 1.8.1
 add-apt-repository ppa:webupd8team/java
 echo "deb http://www.apache.org/dist/cassandra/debian 310x main" > /etc/apt/sources.list.d/cassandra.sources.list
 apt-key adv --keyserver pool.sks-keyservers.net --recv-key A278B781FE4B2BDA
