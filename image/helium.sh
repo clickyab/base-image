@@ -24,6 +24,7 @@ $minimal_apt_get_install wget curl sudo git zsh nano libsqlite3-dev autoconf bis
                 iputils-ping iproute2 zookeeperd
 
 wget -O /tmp/kafka.tgz http://apache.claz.org/kafka/0.10.2.0/kafka_2.12-0.10.2.0.tgz
+mkdir /opt/Kafka
 tar -xvf /tmp/kafka.tgz -C /opt/Kafka/
 
 GOBIN=/usr/local/bin GOPATH=/tmp go get -v -u github.com/mailhog/MailHog
