@@ -20,7 +20,11 @@ $minimal_apt_get_install wget curl sudo git zsh nano libsqlite3-dev autoconf bis
                 libyaml-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev htop redis-server mariadb-server mariadb-client mercurial \
                 ruby-dev rabbitmq-server realpath pkg-config unzip dnsutils re2c python-pip htop nodejs \
                 python-dev libpq-dev tmux bzr libsodium-dev cmake oracle-java8-set-default python-setuptools \
-        	postgresql elasticsearch libevent1-dev libconfig-dev liblua5.1-0-dev lua5.1 libjansson-dev cassandra iputils-ping iproute2
+        	    postgresql elasticsearch libevent1-dev libconfig-dev liblua5.1-0-dev lua5.1 libjansson-dev cassandra \
+                iputils-ping iproute2 zookeeperd
+
+wget -O /tmp/kafka.tgz http://apache.claz.org/kafka/0.10.2.0/kafka_2.12-0.10.2.0.tgz
+tar -xvf /tmp/kafka.tgz -C /opt/Kafka/
 
 GOBIN=/usr/local/bin GOPATH=/tmp go get -v -u github.com/mailhog/MailHog
 pip install --upgrade --no-cache-dir pip
