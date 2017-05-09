@@ -10,6 +10,8 @@ RUN /bd_build/prepare.sh && \
         /bd_build/helium.sh && \
 	/bd_build/cleanup.sh
 
+ENV DEBIAN_FRONTEND teletype
+
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
