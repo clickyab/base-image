@@ -1,5 +1,5 @@
 NAME = registry.clickyab.ae/clickyab/baseimage-go
-VERSION = 0.9.22
+VERSION = 0.9.23
 
 .PHONY: all build test tag_latest release ssh
 
